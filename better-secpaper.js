@@ -2,7 +2,7 @@
 // author: bnkr
 
 var init_sort_func = function () {
-    const sum_values = cnt => Object.values(cnt).reduce((a,b) => a + b, 0);
+    const sum_values = cnt => Object.values(cnt).reduce((a,b) => a + parseInt(b), 0);
     const get_search_hits = cnt_str => sum_values(JSON.parse(cnt_str.replaceAll("'", '"')));
 
     $.fn.dataTableExt.oSort["counter-desc"] = function (x, y)
